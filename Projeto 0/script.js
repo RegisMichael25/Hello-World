@@ -5,9 +5,12 @@ let menos = document.getElementById('menos');
 let valor = document.getElementById('valor');
 let girar = document.getElementById('girar');
 let ganhouPerdeu = document.getElementById('ganhou-perdeu');
+let escolhaUsuario = document.getElementById('escolha-usuario');
+
 
 let moneyTemp = 0;
 let moneyUsuario = 100;
+let numeroAleatorio = null;
 
 money.innerText = `R$ ${moneyUsuario}`;
 
@@ -39,3 +42,12 @@ function subtrairDinheiro() {
     }
 }
 
+function inicioAposta() {
+    numeroAleatorio = Math.round(Math.random() * (10 - 1) + 1);
+    console.log(numeroAleatorio);
+    if(numeroAleatorio == escolhaUsuario.value) {
+        ganhouPerdeu.innerText = 'Parabéns, você acabou de ganhar!'
+    } else {
+        ganhouPerdeu.innerText = 'Que pena, você perdeu.'
+    }
+}
