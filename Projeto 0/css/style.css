@@ -1,0 +1,23 @@
+body{
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+#fundo-branco{
+    background-color: #fff;
+    width: 400px;
+    margin: 0 auto;
+    height: 600px;
+}
+
+header{
+    width: 400px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+
+main{
+    width: 400px;
+    margin: 0 auto;
+    background-color: white;
+}
