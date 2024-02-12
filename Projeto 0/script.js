@@ -43,11 +43,30 @@ function subtrairDinheiro() {
 }
 
 function inicioAposta() {
-    numeroAleatorio = Math.round(Math.random() * (10 - 1) + 1);
-    console.log(numeroAleatorio);
-    if(numeroAleatorio == escolhaUsuario.value) {
-        ganhouPerdeu.innerText = 'Parabéns, você acabou de ganhar!'
+    result.innerHTML = '';
+    if(escolhaUsuario.value == '' || escolhaUsuario.value == 0) {
+        alert('Não foi possivel iniciar, escolha um número.');
+        result.innerHTML = '';
+    } else if(moneyTemp == 0) {
+        alert('Não apostou nada, incluimos automaticamente R$ 10')
+        moneyTemp = moneyTemp + 10;
+        valor.innerText = `${moneyTemp}`;
+        moneyUsuario = moneyUsuario - 10;
+        money.innerText = `R$ ${moneyUsuario}`;
     } else {
-        ganhouPerdeu.innerText = 'Que pena, você perdeu.'
+        numeroAleatorio = Math.round(Math.random() * (10 - 1) + 1);
+        console.log(numeroAleatorio);
+        if(numeroAleatorio == escolhaUsuario.value) {
+            ganhouPerdeu.innerText = 'Parabéns, você acabou de ganhar!'
+            moneyUsuario = moneyUsuario + (moneyTemp * 2);
+            money.innerHTML = `R$ ${moneyUsuario}`;
+        } else {
+            ganhouPerdeu.innerText = 'Que pena, você perdeu.'
+            moneyUsuario = moneyUsuario - moneyTemp;
+            money.innerHTML = `R$ ${moneyUsuario}`
+        }
+        result.innerHTML += `<p>O número sortiado foi ${numeroAleatorio}.</p>`
+        result.innerHTML += `<p>Você escolheu ${escolhaUsuario.value}.</p>`
     }
+    escolhaUsuario.value = '';
 }
