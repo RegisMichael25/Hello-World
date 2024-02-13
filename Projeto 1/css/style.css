@@ -35,6 +35,7 @@ body{
 #nav-bar li:hover{
     background: #c2aaaa9a;
     border-radius: 20px;
+    transition: 1s;
 }
 
 #banner-principal{
