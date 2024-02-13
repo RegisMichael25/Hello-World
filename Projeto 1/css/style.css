@@ -115,3 +115,15 @@ footer a{
 #nav-footer li{
     margin: 20px;
 }
+
+#titulo-imagem-centro, #titulo-imagens-animadas{
+    visibility: hidden;
+}
+
+#imagem-centro, #paragrafo-foto-centro{
+    visibility: hidden;
+}
+
+#itens-animados{
+    visibility: hidden;
+}
