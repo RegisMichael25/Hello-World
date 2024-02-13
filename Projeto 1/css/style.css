@@ -49,24 +49,33 @@ body{
     width: 100vw;
 }
 
+#secao-central{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 #titulo-imagem-centro{
     font-size: 20pt;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
     text-align: center;
 }
 
-#imagem-centro{
-    margin: 7rem;
+#paragrafo-foto-centro{
+    width: 30%;
+    background: #ffffffb2;
+    z-index: 1;
 }
 
-#paragrafo-foto-centro{
-    background-color: #fff;
-    position: absolute;
-    left: 450px;
-    bottom: -700px;
-    width: 30%;
-    padding: 30px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.151);
+#imagem-centro{
+    margin: 2em;
+}
+
+#centralizar-p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #titulo-imagens-animadas{
