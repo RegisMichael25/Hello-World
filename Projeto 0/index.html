@@ -9,18 +9,28 @@
 <body>
     <div id="fundo-branco">
         <header>
-            <h1 id="money">R$ 100</h1>
+            <div id="dinheiro-top-left">
+                <h1 id="money">R$ 100</h1>
+            </div>
         </header>
         <main>
-            <p id="res-num"></p>
-            <p>Resultado</p>
-            <button onclick="subtrairDinheiro()" id="menos">-</button>
-            <span id="valor">0</span>
-            <button onclick="adicionarDinheiro()" id="mais">+</button> <br />
-            <div>
-                <input type="number" placeholder="Escolha um número: " id="escolha-usuario">
+            <div id="container-principal">
+                <p id="res-num"></p>
+                <p style="color: white; margin: 2rem;">Valor da aposta.</p>
+                <div id="botoes-mais-menos">
+                    <button onclick="subtrairDinheiro()" id="menos">-</button>
+                    <span id="valor">0</span>
+                    <button onclick="adicionarDinheiro()" id="mais">+</button> <br />
+                </div>
+                <div id="numeros-botoes">
+                    <button class="buttons" id="btn-1" value="1" onclick="botaoEscolhido1()">1</button>
+                    <button class="buttons" id="btn-2" value="2" onclick="botaoEscolhido2()">2</button>
+                    <button class="buttons" id="btn-3" value="3" onclick="botaoEscolhido3()">3</button>
+                    <button class="buttons" id="btn-4" value="4" onclick="botaoEscolhido4()">4</button>
+                    <button class="buttons" id="btn-5" value="5" onclick="botaoEscolhido5()">5</button>
+                </div>
+                <button id="girar" onclick="inicioAposta()">Girar</button>
             </div>
-            <button id="girar" onclick="inicioAposta()">Girar</button>
         </main>
         <footer>
             <p id="ganhou-perdeu"></p>

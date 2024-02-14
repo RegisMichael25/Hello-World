@@ -5,9 +5,14 @@ let menos = document.getElementById('menos');
 let valor = document.getElementById('valor');
 let girar = document.getElementById('girar');
 let ganhouPerdeu = document.getElementById('ganhou-perdeu');
-let escolhaUsuario = document.getElementById('escolha-usuario');
 
+const btn1 = document.querySelector('button#btn-1');
+const btn2 = document.getElementById('#btn-2');
+const btn3 = document.getElementById('#btn-3');
+const btn4 = document.getElementById('#btn-4');
+const btn5 = document.getElementById('#btn-5');
 
+let numeroEscolhido = null;
 let moneyTemp = 0;
 let moneyUsuario = 100;
 let numeroAleatorio = null;
@@ -16,12 +21,18 @@ money.innerText = `R$ ${moneyUsuario}`;
 
 valor.innerText = `${moneyTemp}`;
 
+
+function acrescenta10() {
+    moneyTemp = moneyTemp + 10;
+    valor.innerText = `${moneyTemp}`;
+    moneyUsuario = moneyUsuario - 10;
+    money.innerText = `R$ ${moneyUsuario}`;
+}
+
+
 function adicionarDinheiro() {
     if(moneyUsuario > 0) {
-        moneyTemp = moneyTemp + 10;
-        valor.innerText = `${moneyTemp}`;
-        moneyUsuario = moneyUsuario - 10;
-        money.innerText = `R$ ${moneyUsuario}`;
+        acrescenta10();
     } else {
         alert('Você não pode mais subir a aposta! Se preferir diminua sua aposta.');
     }
@@ -30,10 +41,7 @@ function adicionarDinheiro() {
 function subtrairDinheiro() {
     if(moneyTemp === 0) {
         alert('Zero ou menos não é aposta! Minimo R$ 10');
-        moneyTemp = moneyTemp + 10;
-        moneyUsuario = moneyUsuario - 10;
-        money.innerText = `R$ ${moneyUsuario}`;
-        valor.innerText = `${moneyTemp}`;
+        acrescenta10();
     } else {
         moneyTemp = moneyTemp - 10;
         valor.innerText = `${moneyTemp}`;
@@ -42,31 +50,20 @@ function subtrairDinheiro() {
     }
 }
 
-function inicioAposta() {
-    result.innerHTML = '';
-    if(escolhaUsuario.value == '' || escolhaUsuario.value == 0) {
-        alert('Não foi possivel iniciar, escolha um número.');
-        result.innerHTML = '';
-    } else if(moneyTemp == 0) {
-        alert('Não apostou nada, incluimos automaticamente R$ 10')
-        moneyTemp = moneyTemp + 10;
-        valor.innerText = `${moneyTemp}`;
-        moneyUsuario = moneyUsuario - 10;
-        money.innerText = `R$ ${moneyUsuario}`;
-    } else {
-        numeroAleatorio = Math.round(Math.random() * (10 - 1) + 1);
-        console.log(numeroAleatorio);
-        if(numeroAleatorio == escolhaUsuario.value) {
-            ganhouPerdeu.innerText = 'Parabéns, você acabou de ganhar!'
-            moneyUsuario = moneyUsuario + (moneyTemp * 2);
-            money.innerHTML = `R$ ${moneyUsuario}`;
-        } else {
-            ganhouPerdeu.innerText = 'Que pena, você perdeu.'
-            moneyUsuario = moneyUsuario - moneyTemp;
-            money.innerHTML = `R$ ${moneyUsuario}`
-        }
-        result.innerHTML += `<p>O número sortiado foi ${numeroAleatorio}.</p>`
-        result.innerHTML += `<p>Você escolheu ${escolhaUsuario.value}.</p>`
-    }
-    escolhaUsuario.value = '';
+function botaoEscolhido1() {
+    console.log(btn1.value)
 }
+function botaoEscolhido1() {
+    console.log(btn1.value)
+}
+function botaoEscolhido1() {
+    console.log(btn1.value)
+}
+function botaoEscolhido1() {
+    console.log(btn1.value)
+}
+function botaoEscolhido1() {
+    console.log(btn1.value)
+}
+
+
