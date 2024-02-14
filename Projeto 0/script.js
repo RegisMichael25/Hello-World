@@ -54,26 +54,41 @@ function botaoEscolhido1() {
     console.log(btn1.value)
     numeroEscolhido = btn1.value;
     console.log(numeroEscolhido);
+    ganhouPerdeu.innerHTML = 'Resultado...';
+    ganhouPerdeu.classList.remove('ganhou');
+    ganhouPerdeu.classList.remove('perdeu');
 }
 function botaoEscolhido2() {
     console.log(btn2.value)
     numeroEscolhido = btn2.value;
     console.log(numeroEscolhido);
+    ganhouPerdeu.innerHTML = 'Resultado...';
+    ganhouPerdeu.classList.remove('ganhou');
+    ganhouPerdeu.classList.remove('perdeu');
 }
 function botaoEscolhido3() {
     console.log(btn3.value)
     numeroEscolhido = btn3.value;
     console.log(numeroEscolhido);
+    ganhouPerdeu.innerHTML = 'Resultado...';
+    ganhouPerdeu.classList.remove('ganhou');
+    ganhouPerdeu.classList.remove('perdeu');
 }
 function botaoEscolhido4() {
     console.log(btn4.value)
     numeroEscolhido = btn4.value;
     console.log(numeroEscolhido);
+    ganhouPerdeu.innerHTML = 'Resultado...';
+    ganhouPerdeu.classList.remove('ganhou');
+    ganhouPerdeu.classList.remove('perdeu');
 }
 function botaoEscolhido5() {
     console.log(btn5.value)
     numeroEscolhido = btn5.value;
     console.log(numeroEscolhido);
+    ganhouPerdeu.innerHTML = 'Resultado...';
+    ganhouPerdeu.classList.remove('ganhou');
+    ganhouPerdeu.classList.remove('perdeu');
 }
 
 
@@ -93,12 +108,12 @@ function inicioAposta() {
         alert('Não é permitido apostar tudo, impossivel continuar.');
         return;
     }
-
+    
     numeroAleatorio = Math.round(Math.random() * (5 - 1)  + 1);
     console.log(numeroAleatorio);
     console.log(moneyTemp);
     console.log(moneyUsuario);
-
+    
     if(numeroEscolhido == numeroAleatorio){
         ganhouPerdeu.innerHTML = 'Parabéns, você ganhou.';
         moneyUsuario = moneyUsuario + moneyTemp * 2
@@ -106,12 +121,17 @@ function inicioAposta() {
         moneyTemp = 0;
         valor.innerHTML = `${moneyTemp}`;
         numeroEscolhido = null;
+        ganhouPerdeu.classList.remove('perdeu')
+        ganhouPerdeu.classList.add('ganhou')
         return;
     } else {
         ganhouPerdeu.innerHTML = 'Perdeu';
         moneyTemp = 0;
         valor.innerHTML = `${moneyTemp}`;
         numeroEscolhido = null;
+        
+        ganhouPerdeu.classList.remove('ganhou')
+        ganhouPerdeu.classList.add('perdeu')
         return;
     }
 }

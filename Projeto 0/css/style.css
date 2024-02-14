@@ -85,3 +85,12 @@ body{
     text-align: center;
     padding: 20px;
 }
+
+
+.perdeu{
+    background-color: red;
+}
+
+.ganhou{
+    background-color: green;
+}
