@@ -16,8 +16,7 @@ body{
 #fundo-branco{
     background-color: rgba(158, 152, 152, 0.199);
     width: 50%;
-    max-height: 35rem;
-    min-height: 20rem;
+    height: fit-content;
     border-radius: 20px;
 }
 
@@ -34,7 +33,7 @@ body{
 }
 
 #botoes-mais-menos{
-    margin: 2rem;
+    margin: 1rem;
     color: rgb(255, 255, 255);
 }
 
@@ -79,4 +78,10 @@ body{
     background-color: #0704044b;
     color: white;
     cursor: pointer;
+}
+
+#ganhou-perdeu{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
 }
