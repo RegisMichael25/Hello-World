@@ -1,9 +1,9 @@
 export default function Nav() {
     return(
         <div className="mx-4 my-20">
-            <ul className="flex justify-end mr-2 gap-2 cursor-pointer">
-                <li className="hover:text-[#b84949]">Register</li>
-                <li className="hover:text-[#b84949]">Login</li>
+            <ul className="flex justify-end mr-10 gap-5 cursor-pointer">
+                <li className="text-2xl hover:bg-[#6C63FF] hover:text-[#fff] p-3 rounded-2xl hover:transition ease-in-out delay-100">Register</li>
+                <li className="text-2xl hover:bg-[#6C63FF] hover:text-[#fff] p-3 rounded-2xl hover:transition ease-in-out delay-100">Login</li>
             </ul>
         </div>
     );

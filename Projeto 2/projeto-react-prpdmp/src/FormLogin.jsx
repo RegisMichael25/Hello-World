@@ -1,11 +1,15 @@
 export default function FormLogin() {
     return(
-    <div className="flex flex-col gap-8 mx-7">
-        <label className=""> Email: 
-            <input className="bg-[#00000042] rounded-md border-b-2 focus:outline-none" type="text" placeholder="Digite seu Email "/>
+    <div className="flex flex-col gap-8 mx-3">
+
+        <label className="text-lg"> <span className="text-[#ffffff]">Nome: </span> 
+            <input className="bg-[#00000042] text-[#ffffff] mx-0.5 rounded-md border-b-2 w-[300px] focus:outline-none pl-2 p-1" type="text" placeholder="Digite seu Nome "/>
         </label>
-        <label> Senha: 
-            <input className="bg-[#00000042] rounded-md focus:outline-none border-b-2" type="password" placeholder="Informe sua Senha "/>
+        <label className="text-lg"> <span className="text-[#ffffff]">Email: </span> 
+            <input className="bg-[#00000042] text-[#ffffff]  mx-2 rounded-md border-b-2 w-[300px] focus:outline-none pl-2 p-1" type="email" placeholder="Digite seu Email "/>
+        </label>
+        <label className="text-lg"> <span className="text-[#ffffff]">Senha: </span> 
+            <input className="bg-[#00000042] text-[#ffffff]  mx-1 rounded-md w-[300px] focus:outline-none pl-2 p-1 border-b-2" type="password" placeholder="Informe sua Senha "/>
         </label>
     </div>
     )
