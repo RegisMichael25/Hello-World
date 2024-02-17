@@ -5,6 +5,8 @@ import ImgForm from './assets/imagemformulario.svg'
 import ButtonForm from './ButtonForm'
 import DarkLight from './DarkLight'
 
+
+
 function App() {
   return (
     <div id='container-global' className='flex justify-center items-center flex-col h-screen mx-fit'>
@@ -24,7 +26,8 @@ function App() {
               <DarkLight />
             </div>
             <Nav />
-            <img src={ImgForm} alt="" />
+            {/* <img src={ImgForm} alt="" /> */}
+            <iframe src="https://lottie.host/embed/82af53e0-5097-4607-893c-4ee53afdd9a4/79l1AUzo8d.json"></iframe>
           </div>
         </div>
 

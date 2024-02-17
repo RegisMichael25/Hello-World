@@ -1,1 +1,18 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.dark-mode{
+    background: #252731;
+    color: white;
+}
+
+.button-dark{
+    color:black;
+}
+
+.li-dark:hover{
+    color: rgb(24, 27, 41);
+}
+
+iframe{
+    transform:scale(1.5)
+}
