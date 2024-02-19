@@ -32,6 +32,13 @@ body{
     margin: 2rem;
 }
 
+#res-num{
+    background: #3c80ff41;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 #botoes-mais-menos{
     color: rgb(255, 255, 255);
 }

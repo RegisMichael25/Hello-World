@@ -29,6 +29,13 @@ function acrescenta10() {
     money.innerText = `R$ ${moneyUsuario}`;
 }
 
+function resGanhouPerdeu() {
+    console.log(numeroEscolhido);
+    ganhouPerdeu.innerHTML = 'Resultado...';
+    ganhouPerdeu.classList.remove('ganhou');
+    ganhouPerdeu.classList.remove('perdeu');
+}
+
 
 function adicionarDinheiro() {
     if(moneyUsuario > 0) {
@@ -53,42 +60,27 @@ function subtrairDinheiro() {
 function botaoEscolhido1() {
     console.log(btn1.value)
     numeroEscolhido = btn1.value;
-    console.log(numeroEscolhido);
-    ganhouPerdeu.innerHTML = 'Resultado...';
-    ganhouPerdeu.classList.remove('ganhou');
-    ganhouPerdeu.classList.remove('perdeu');
+    resGanhouPerdeu();
 }
 function botaoEscolhido2() {
     console.log(btn2.value)
     numeroEscolhido = btn2.value;
-    console.log(numeroEscolhido);
-    ganhouPerdeu.innerHTML = 'Resultado...';
-    ganhouPerdeu.classList.remove('ganhou');
-    ganhouPerdeu.classList.remove('perdeu');
+    resGanhouPerdeu();
 }
 function botaoEscolhido3() {
     console.log(btn3.value)
     numeroEscolhido = btn3.value;
-    console.log(numeroEscolhido);
-    ganhouPerdeu.innerHTML = 'Resultado...';
-    ganhouPerdeu.classList.remove('ganhou');
-    ganhouPerdeu.classList.remove('perdeu');
+    resGanhouPerdeu();
 }
 function botaoEscolhido4() {
     console.log(btn4.value)
     numeroEscolhido = btn4.value;
-    console.log(numeroEscolhido);
-    ganhouPerdeu.innerHTML = 'Resultado...';
-    ganhouPerdeu.classList.remove('ganhou');
-    ganhouPerdeu.classList.remove('perdeu');
+    resGanhouPerdeu();
 }
 function botaoEscolhido5() {
     console.log(btn5.value)
     numeroEscolhido = btn5.value;
-    console.log(numeroEscolhido);
-    ganhouPerdeu.innerHTML = 'Resultado...';
-    ganhouPerdeu.classList.remove('ganhou');
-    ganhouPerdeu.classList.remove('perdeu');
+    resGanhouPerdeu();
 }
 
 
@@ -120,6 +112,7 @@ function inicioAposta() {
         money.innerText = `R$ ${moneyUsuario}`;
         moneyTemp = 0;
         valor.innerHTML = `${moneyTemp}`;
+        result.innerHTML = `<p>O número escolhido foi ${numeroEscolhido} o número sortiado é ${numeroAleatorio}.</p>`
         numeroEscolhido = null;
         ganhouPerdeu.classList.remove('perdeu')
         ganhouPerdeu.classList.add('ganhou')
@@ -128,10 +121,11 @@ function inicioAposta() {
         ganhouPerdeu.innerHTML = 'Perdeu';
         moneyTemp = 0;
         valor.innerHTML = `${moneyTemp}`;
+        result.innerHTML = `<p>O número escolhido foi ${numeroEscolhido} o número sortiado é ${numeroAleatorio}.</p>`
         numeroEscolhido = null;
-        
         ganhouPerdeu.classList.remove('ganhou')
         ganhouPerdeu.classList.add('perdeu')
         return;
     }
+    
 }
