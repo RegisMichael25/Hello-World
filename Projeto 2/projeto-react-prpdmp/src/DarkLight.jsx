@@ -10,12 +10,14 @@ function DarkLight() {
             let dark = document.getElementById('dark');
             let btnReg = document.getElementById('button-register');
             let liDark = document.getElementById('li-dark');
+            let btnLog = document.getElementById('button-login');
 
             if(temp === 0){
                 dark.classList.remove('bi-moon-fill');
                 dark.classList.add('bi-brightness-high-fill');
                 containerGlobal.classList.add('dark-mode');
                 btnReg.classList.add('button-dark');
+                btnLog.classList.add('button-dark');
                 liDark.classList.add('li-dark:hover');
                 setTemp(1);
             }else {

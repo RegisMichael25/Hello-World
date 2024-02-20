@@ -16,3 +16,7 @@
 iframe{
     transform:scale(1.5)
 }
+
+.hideen{
+    visibility: hidden;
+}
