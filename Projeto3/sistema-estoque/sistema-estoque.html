@@ -7,23 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <button><a href="index.html">Voltar</a></button>
-    <button onclick="adicionarProduto()">+</button>
-    <input type="text" id="nome-produto" placeholder="Nome do produto: ">
-    <input type="number" id="valor-produto" placeholder="Valor do produto:">
-    <table id="novos-produtos">
-            <tr>
-                <th>Código</th>
-                <th>Produto</th>
-                <th>Preço</th>
-            </tr>
-            <tr>
-                <th>001</th>
-                <th>Notebook</th>
-                <th>R$ 1.500</th>
-            </tr>
-    </table>
-
+    <div id="botao-voltar"><button><a href="index.html">Voltar</a></button></div>
+    
+    <div id="container">
+        <div id="adicionar-item">
+            <input type="text" id="nome-produto" placeholder="Nome do produto: " class="input-produto">
+            <input type="number" id="valor-produto" placeholder="Valor do produto: " class="input-produto">
+            <input type="number" id="quantidade-produto" placeholder="Quantidade: " class="input-produto">
+            <button onclick="adicionarProduto()" id="botao-adicionar">+</button>
+        </div>
+        <table id="novos-produtos">
+                <tr>
+                    <th>Código</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                </tr>
+                <tr>
+                    <th>000</th>
+                    <th>Notebook</th>
+                    <th>100und</th>
+                    <th>R$ 1.500</th>
+                </tr>
+        </table>
+    </div>
+    <input type="text" placeholder="Pesquisar produto: " id="pesquisar-produto"> <button onclick="pesquisaProduto()">Pesquisa</button>
     <script src="./js/script.js"></script>
 </body>
 </html>
