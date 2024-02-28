@@ -31,27 +31,32 @@ function adicionarProduto() {
 
 
     const produtos = {
+        
         codigo: numProduto,
         nomeProduto: inputName.value,
         quantidade: quantidadeProduto.value,
         valorProduto: inputValue.value
+
     }
 
-newProdutes.innerHTML += `
-    <table>
-        <tr>
-            <th>00${produtos.codigo}</th>
-            <th>${produtos.nomeProduto}</th>
-            <th>${produtos.quantidade}und</th>
-            <th>R$ ${produtos.valorProduto}</th>
-        </tr>
-    </table>
-`
+    const listaProdutos = [];
+
+    newProdutes.innerHTML += `
+    <div class="produto">
+    <p>00${produtos.codigo}</p>
+    <p>${produtos.nomeProduto}</p>
+    <p>${produtos.quantidade}und</p>
+    <p>R$ ${produtos.valorProduto}</p>
+    </div>
+    `
     numProduto += 1
     console.log(inputName.value);
     console.log(inputValue.value);
     console.log(quantidadeProduto.value);
     console.log(produtos);
+
+    listaProdutos.push(produtos);
+    console.log(listaProdutos);
 }
 
 function pesquisaProduto() {
