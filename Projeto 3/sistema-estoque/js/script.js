@@ -1,8 +1,8 @@
 let usuario = document.getElementById('user');
 let senha = document.getElementById('password');
 let replaced = './sistema-estoque.html'
-loginUsuario = 'Regis'
-senhaUsuario = '1234'
+loginUsuario = 'usuario'
+senhaUsuario = '123456'
 
 function login() {
     if(usuario.value == '' || usuario.value == '') {
@@ -55,5 +55,5 @@ newProdutes.innerHTML += `
 }
 
 function pesquisaProduto() {
-
+    
 }
