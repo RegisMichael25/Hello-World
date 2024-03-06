@@ -1,8 +1,9 @@
 let usuario = document.getElementById('user');
 let senha = document.getElementById('password');
-let replaced = './sistema-estoque.html'
-loginUsuario = 'usuario'
-senhaUsuario = '123456'
+// let replaced = './sistema-estoque.html'
+// loginUsuario = 'usuario'
+// senhaUsuario = '123456'
+
 
 function login() {
     if(usuario.value == '' || usuario.value == '') {
