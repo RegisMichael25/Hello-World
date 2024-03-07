@@ -101,7 +101,7 @@ function inicioAposta() {
         return;
     }
     
-    numeroAleatorio = Math.round(Math.random() * (5 - 1)  + 1);
+    numeroAleatorio = Math.round(Math.random() * (5 - 1) + 1);
     console.log(numeroAleatorio);
     console.log(moneyTemp);
     console.log(moneyUsuario);

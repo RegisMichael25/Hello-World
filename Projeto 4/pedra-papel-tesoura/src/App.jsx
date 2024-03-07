@@ -1,6 +1,6 @@
 import './App.css'
 import Ppt from './Ppt'; 
-import { FaHandRock } from "react-icons/fa";
+
 
 
 
@@ -9,10 +9,9 @@ import { FaHandRock } from "react-icons/fa";
 function App() {
   return (
     <div>
-      
+        <Ppt />
     </div>
 )
 }
     
 export default App
-    
