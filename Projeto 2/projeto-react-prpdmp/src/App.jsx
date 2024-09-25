@@ -1,7 +1,7 @@
 import './App.css'
 import Nav from './Nav'
 import FormRegister from './FormRegister'
-import ImgForm from './assets/imagemformulario.svg'
+import ImgForm from './assets/imagemformulario.svg' 
 import ButtonRegister from './ButtonRegister'
 import DarkLight from './DarkLight'
 import FormLogin from './FormLogin'
