@@ -7,6 +7,7 @@
 main{
     width: 100vw;
     height: 100vh;
+    /* background-color: #fff; */
     background: linear-gradient(#2B2B2B, #737373);
     display: flex;
     justify-content: center;
@@ -25,6 +26,8 @@ main{
     height: 600px;
     background-color: #BDC4FE;
     position: absolute;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.479);
 }
 
 .icon_exit, .add{
@@ -34,12 +37,14 @@ main{
     font-size: 25pt;
 }
 
-.add:hover{
+#add:hover{
+    cursor: pointer;
     color: rgb(47, 187, 89);
 }
 
 .icon_exit:hover{
     color: #ff0000b6;
+    cursor: pointer;
 }
 
 .separar{
@@ -84,9 +89,23 @@ main{
     background-color: rgb(59, 175, 169);
     border: none;
     box-shadow: 1px 3px 3px #00000050;
+    cursor: pointer;
 }
 
 .add_to_list:hover{
     background-color: #00ff2270;
     color: black;
+    cursor: pointer;
 }
+
+.container_data{
+    width: 80%;
+    height: fit-content;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
